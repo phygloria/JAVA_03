@@ -8,6 +8,9 @@ public class Chap01RequestMappingApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(Chap01RequestMappingApplication.class, args);
+
+//        MethodMappingTestController mt = new MethodMappingTestController();
+//                mt.registMenu();
     }
 
 }
