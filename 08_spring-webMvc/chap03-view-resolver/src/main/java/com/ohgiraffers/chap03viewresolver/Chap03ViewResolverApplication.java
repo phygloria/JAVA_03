@@ -1,13 +1,13 @@
-package com.ohgiraffers.chap01requestmapping;
+package com.ohgiraffers.chap03viewresolver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Chap01RequestMappingApplication {
+public class Chap03ViewResolverApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Chap01RequestMappingApplication.class, args);
+        SpringApplication.run(Chap03ViewResolverApplication.class, args);
     }
 
 }
