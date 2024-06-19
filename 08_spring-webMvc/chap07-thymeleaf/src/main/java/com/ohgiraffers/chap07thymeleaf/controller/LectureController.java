@@ -18,8 +18,8 @@ import java.util.Map;
 public class LectureController {
     @GetMapping("expression")
     public ModelAndView expression(ModelAndView mv){
-        mv.addObject("member", new MemberDTO("홍길동", 20,'남',"서울시 서초구"));
-        mv.addObject("hello", "hello!<h3>Thymeleaf</h3>");
+        mv.addObject("member", new MemberDTO("개발세발", 20000,'남',"프젝3 화이팅"));
+        mv.addObject("testAlert", "hello! 팝업입니당");
         mv.setViewName("lecture/expression");
         return mv;
     }
@@ -37,14 +37,6 @@ public class LectureController {
         mv.addObject("memberList", memberDTOList);
         mv.setViewName("/lecture/conditional");
 
-        Map<String, MemberDTO> memberMap = new HashMap<>();
-        memberMap.put("m01", new MemberDTO("홍길동", 20, '남', "서울시 서초구"));
-        memberMap.put("m02", new MemberDTO("유관순", 22, '여', "서울시 노원구"));
-        memberMap.put("m03", new MemberDTO("장보고", 40, '남', "서울시 종로구"));
-        memberMap.put("m04", new MemberDTO("신사임당", 30, '여', "서울시 성북구"));
-
-        mv.addObject("memberMap", memberMap);
-
         return mv;
     }
 
@@ -53,9 +45,10 @@ public class LectureController {
     @GetMapping("etc")
     public ModelAndView etc(ModelAndView mv){
         SelectCriteria selectCriteria = new SelectCriteria(1, 10, 3);
-        mv.addObject(selectCriteria);
+        mv.addObject("selectCriteria", selectCriteria);
 
         MemberDTO member = new MemberDTO("홍길동", 20, '남', "서울시 서초구");
+
         mv.addObject("member", member);
 
         List<MemberDTO> memberList = new ArrayList<>();
@@ -65,6 +58,8 @@ public class LectureController {
         memberList.add(new MemberDTO("신사임당", 30, '여', "서울시 성북구"));
 
         mv.addObject("memberList", memberList);
+        // 데이터 전달  memberlsit로 포장하고 mv로 데이터 전달
+
 
         Map<String, MemberDTO> memberMap = new HashMap<>();
         memberMap.put("m01", new MemberDTO("홍길동", 20, '남', "서울시 서초구"));
@@ -73,8 +68,6 @@ public class LectureController {
         memberMap.put("m04", new MemberDTO("신사임당", 30, '여', "서울시 성북구"));
 
         mv.addObject("memberMap", memberMap);
-
-
         mv.setViewName("/lecture/etc");
         return mv;
     }
@@ -83,9 +76,13 @@ public class LectureController {
     public ModelAndView fragment(ModelAndView mv){
         mv.addObject("test1", "values1");
         mv.addObject("test2", "values2");
+        mv.addObject("testAlert", "hello! 팝업입니당");
         mv.setViewName("/lecture/fragment");
         return mv;
     }
+
+
+
 
 
 

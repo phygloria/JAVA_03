@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/chap01-request-mapping" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/chap01-request-mapping" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/chap03-practice/Practice0617" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/chap03-practice/Practice0617" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/chap03-practice/view-resolver-practice" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/chap03-practice/view-resolver-practice" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/chap03-view-resolver" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/chap03-view-resolver" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/chap07-thymeleaf" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/chap07-thymeleaf" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -26,7 +26,7 @@
     <li>parser-level 주석</li>
     <!--/*  주석내용    */-->
     <li>prototype-only 주석</li>
-    <!--/*/ 주석내용 /*/-->
+<!--    /*/ 주석내용 /*/-->
 </ul>
 
 <h2> 표현식1 변수 표현식 ${...}</h2>
@@ -100,10 +100,14 @@
     <li th:inline="none">[[${ hello }]]</li>
     <li th:inline="none">[(${ hello })]</li>
 </ul>
+
+
 <script th:inline="javascript">
-    let hello = `[[${hello}]]`
-    alert(hello)
+    let test_Alert = `[[${testAlert}]]`
+    alert(test_Alert)
 </script>
+
+
 
 <h2>리터럴 치환 ||</h2>
 <h3>'+'를 쓰지 않고 문자열 합치기</h3>

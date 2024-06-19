@@ -8,10 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 import java.io.PrintWriter;
 
 /*
-* 클래스 레벨에 @RequestMapping 어노테이션 사용이 가능하다.
-* 클래스레벨에 url을 공통 부분을 이용해 설정하고 나면 매번 핸들러 메소드에 url의 중복되는 내용은 작성하지 않아도 된다.
-* 이 떄 와일드 카드를 이용해서 조금 더 포괄적인 url 패턴을 설정할 수 있다.
-* */
+ * 클래스 레벨에 @RequestMapping 어노테이션 사용이 가능하다.
+ * 클래스레벨에 url을 공통 부분을 이용해 설정하고 나면 매번 핸들러 메소드에 url의 중복되는 내용은 작성하지 않아도 된다.
+ * 이 떄 와일드 카드를 이용해서 조금 더 포괄적인 url 패턴을 설정할 수 있다.
+ * */
 @Controller
 @RequestMapping("/orders/*")
 public class ClassMappingTestController {

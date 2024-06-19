@@ -1,0 +1,17 @@
+h1 {
+    color: darkcyan;
+}
+
+body {
+    text-align: center;
+}
+
+.test {
+    width: 30px;
+    height: 30px;
+}
+
+.poster {
+    width: 150px;
+    height: 200px;
+}

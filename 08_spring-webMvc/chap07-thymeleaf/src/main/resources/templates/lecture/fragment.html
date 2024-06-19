@@ -17,6 +17,7 @@
 
 <!--
     th:replace는 해당 영역에 있는 코드를 대체하고자 하는 Fragment를 호출하여 치환하는 문법으로
+    th:layout // 옛날방식. 실행됨.         fragment
     기존에 정의되어있는 블록을 지우고 불러온 Fragment로 치환한다.
 
     불러오는 대상 블록을 새로 불러온 블록으로 변경
@@ -25,8 +26,15 @@
     <h1>나는 header</h1>
 </header>
 
+
+<script th:inline="javascript">
+    let test_Alert = `[[${testAlert}]]`
+    alert(test_Alert)
+</script>
+
+
 <!-- frament에 매개변수를 전달하여 동적으로 ui를 꾸미는 것도 가능하다. -->
-<aside th:replace="~{/common/aside :: asideFragment(${test1}, ${test2})}"></aside>
+<aside th:replace="~{/common/aside::asideFragment(${test1}, ${test2})}"></aside>
 <main class="main">
     <aticle>
         <section>
