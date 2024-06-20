@@ -6,48 +6,170 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}">
 </head>
+<style>
+
+
+
+</style>
+
+<script th:inline="javascript">
+    const $form = document.forms.search;
+
+    $form.onsubmit = function () {
+        let keyword = this.querySelector('input[name=query]').value;
+        if (!keyword) {
+            alert('검색어를 입력하지 않았습니다!')
+            return false;
+        }
+    };
+
+
+</script>
+
 <body>
 
-<h1>영화인포</h1>
+
+<h1>한중일 드라마</h1>
+
+<form method="GET" action="https://search.naver.com/search.naver" name="search">
+    <input type="text" name="query" placeholder="검색할 키워드를 입력하세요">
+    <button type="submit">네이버 검색하기</button>
+</form>
+
+
+
+
+
+
+
+
+
+
 
 <hr>
 
-<!--영화 인포 01 인사이드아웃2 -->
+<!--영화 인포 01 이상한변호사 우영우 -->
 <div th:object="${member01}">
-    <a href="movieDetail"><img class="poster" src="https://img.sbs.co.kr/newsnet/etv/upload/2024/04/26/30000922479_700.jpg"></a>
+    <a href="movieDetail"><img class="poster" src="https://i.namu.wiki/i/ef_sXHPS0n5WXXPMy_beluYPRxdyU1Xp498X8xSROif2NmttieYaaRYM7WUj8zj71FEdEfyCsxXmjc_d39jWbg.webp"></a>
+
+
+
+    <a id="heart01">
+        <img class="heart" src="https://cdn-icons-png.flaticon.com/512/138/138533.png">
+    </a>
+    <span id="count01">0</span>
+    <script src="script.js"></script>
+    <script>
+        let count = 0;
+        document.getElementById('heart01').addEventListener('click', function () {
+            count++;
+            document.getElementById('count01').textContent = count;
+        });
+    </script>
+
+
+
     <p th:text="*{title}"></p>
     <p th:text="*{year}"></p>
     <p th:text="*{maker}"></p>
 </div>
 
 <hr>
-<!--영화 인포 02 쿵푸팬더4 -->
+<!--영화 인포 02 내일 -->
 <div th:object="${member02}">
-    <a href="movieDetail"><img class="poster" src="https://newsimg.sedaily.com/2023/12/14/29YIAOABWM_1.jpg"></a>
+    <a href="movieDetail"><img class="poster" src="https://i.namu.wiki/i/uJ5Eati_63Ayxr8gF2R_GK5Iu2W6DIW8xSd1EbtRhLWtnDLqEHndZAxjynrlJU_stncqzWYZrBP0Y2bp1G-iGg.webp"></a>
+
+    <a id="heart02">
+        <img class="heart" src="https://cdn-icons-png.flaticon.com/512/138/138533.png">
+    </a>
+    <span id="count02">0</span>
+    <script src="script.js"></script>
+    <script>
+        let count02 = 0;
+        document.getElementById('heart02').addEventListener('click', function () {
+            count02++;
+            document.getElementById('count02').textContent = count02;
+        });
+    </script>
+
+
+
     <p th:text="*{title}"></p>
     <p th:text="*{year}"></p>
     <p th:text="*{maker}"></p>
 </div>
 <hr>
-<!--영화 인포 03 캐리비안해적5 -->
+<!--영화 인포 03 나는 내일 어제의 너와 만난다 -->
 <div th:object="${member03}">
-    <a href="movieDetail"><img class="poster" src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2017/0529/IE002167123_STD.jpg"></a>
+    <a href="movieDetail"><img class="poster" src="https://i.namu.wiki/i/GZPda-0b0Cb-4jxFo8Y0Rp-jkd0Ti02bgaRk_Gdim8Eyh9pxtfy0YsBC2a9p0o1IvREsPKQ-IVEk7R2HkQojYw.webp"></a>
+
+    <a id="heart03">
+        <img class="heart" src="https://cdn-icons-png.flaticon.com/512/138/138533.png">
+    </a>
+    <span id="count03">0</span>
+    <script src="script.js"></script>
+    <script>
+        let count03 = 0;
+        document.getElementById('heart03').addEventListener('click', function () {
+            count03++;
+            document.getElementById('count03').textContent = count03;
+        });
+    </script>
+
+
+
     <p th:text="*{title}"></p>
     <p th:text="*{year}"></p>
     <p th:text="*{maker}"></p>
 </div>
 <hr>
-<!--영화 인포 04 엘리멘탈 -->
+<!--영화 인포 04 절대쌍교 -->
 <div th:object="${member04}">
-    <a href="movieDetail"><img class="poster" src="https://i.namu.wiki/i/aRAQu813Cdn2FJ5Uo3bxqMPqxGnQX7qSHbGsQiiKBbzruZKKKXOjBmVQuietbkSvq54sGhe7RFKa16HqIsLyFQ.webp"></a>
+    <a href="movieDetail"><img class="poster" src="https://image.tmdb.org/t/p/original/cAoFcXnEy97WNwxnbux3ieiDWyk.jpg"></a>
+
+    <a id="heart04">
+        <img class="heart" src="https://cdn-icons-png.flaticon.com/512/138/138533.png">
+    </a>
+    <span id="count04">0</span>
+    <script src="script.js"></script>
+    <script>
+        let count04 = 0;
+        document.getElementById('heart04').addEventListener('click', function () {
+            count04++;
+            document.getElementById('count04').textContent = count04;
+        });
+    </script>
+
+
+
+
     <p th:text="*{title}"></p>
     <p th:text="*{year}"></p>
     <p th:text="*{maker}"></p>
 </div>
+
+
 <hr>
-<!--영화 인포 05 굴뚝마을의 푸펠 -->
+
+
+<!--영화 인포 05 침향여설 -->
 <div th:object="${member05}">
-    <a href="movieDetail"><img class="poster" src="https://pds.skyedaily.com/news_data2019/20210413134957_lhpzoics.jpg"></a>
+    <a href="movieDetail"><img class="poster" src="https://i.namu.wiki/i/37hR5PLMU5PJkBDrFpTdI-UNDm-Rsf_9x4TUCNDD4-ZHzVSJ7xnr2KCqsZ2b6PNPWBsBiwoYF9dM7Bbcmj_-xA.webp"></a>
+
+
+    <a id="heart05">
+        <img class="heart" src="https://cdn-icons-png.flaticon.com/512/138/138533.png">
+    </a>
+    <span id="count05">0</span>
+    <script src="script.js"></script>
+    <script>
+        let count05 = 0;
+        document.getElementById('heart05').addEventListener('click', function () {
+            count05++;
+            document.getElementById('count05').textContent = count05;
+        });
+    </script>
+
     <p th:text="*{title}"></p>
     <p th:text="*{year}"></p>
     <p th:text="*{maker}"></p>
@@ -66,4 +188,5 @@
 <a href="/"><img class="test" src="https://cdn-icons-png.flaticon.com/512/6490/6490332.png"></a>
 
 </body>
+
 </html>

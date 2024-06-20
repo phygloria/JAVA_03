@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}">
+</head>
+
+<script>
+    const $form = document.forms.search;
+
+    $form.onsubmit = function() {
+        let keyword = this.querySelector('input[name=query]').value;
+        if(!keyword) {
+            alert('검색어를 입력하지 않았습니다!')
+            return false;
+        }
+    };
+</script>
+
+<body>
+
+<h1>애니메이션영화</h1>
+
+<form method="GET" action="https://search.naver.com/search.naver" name="search">
+    <input type="text" name="query" placeholder="검색할 키워드를 입력하세요">
+    <button type="submit">네이버 검색하기</button>
+</form>
+
+
+
+
+
+
+
+
+<hr>
+
+<!--영화 인포 01 인사이드아웃2 -->
+<div th:object="${member01}">
+    <a href="movieDetail"><img class="poster" src="https://img.sbs.co.kr/newsnet/etv/upload/2024/04/26/30000922479_700.jpg"></a>
+    <p th:text="*{title}"></p>
+    <p th:text="*{year}"></p>
+    <p th:text="*{maker}"></p>
+</div>
+
+<hr>
+<!--영화 인포 02 쿵푸팬더4 -->
+<div th:object="${member02}">
+    <a href="movieDetail"><img class="poster" src="https://newsimg.sedaily.com/2023/12/14/29YIAOABWM_1.jpg"></a>
+    <p th:text="*{title}"></p>
+    <p th:text="*{year}"></p>
+    <p th:text="*{maker}"></p>
+</div>
+<hr>
+<!--영화 인포 03 드래곤길들이기3 -->
+<div th:object="${member03}">
+    <a href="movieDetail"><img class="poster" src="https://wimg.mk.co.kr/meet/neds/2019/02/image_readtop_2019_78547_15496071933629510.jpg"></a>
+    <p th:text="*{title}"></p>
+    <p th:text="*{year}"></p>
+    <p th:text="*{maker}"></p>
+</div>
+<hr>
+<!--영화 인포 04 엘리멘탈 -->
+<div th:object="${member04}">
+    <a href="movieDetail"><img class="poster" src="https://i.namu.wiki/i/aRAQu813Cdn2FJ5Uo3bxqMPqxGnQX7qSHbGsQiiKBbzruZKKKXOjBmVQuietbkSvq54sGhe7RFKa16HqIsLyFQ.webp"></a>
+    <p th:text="*{title}"></p>
+    <p th:text="*{year}"></p>
+    <p th:text="*{maker}"></p>
+</div>
+<hr>
+<!--영화 인포 05 굴뚝마을의 푸펠 -->
+<div th:object="${member05}">
+    <a href="movieDetail"><img class="poster" src="https://pds.skyedaily.com/news_data2019/20210413134957_lhpzoics.jpg"></a>
+    <p th:text="*{title}"></p>
+    <p th:text="*{year}"></p>
+    <p th:text="*{maker}"></p>
+</div>
+
+<hr>
+
+<button onclick="location.href='/'">
+    HOME
+</button>
+
+<a href="/">
+    글자 및 이미지 ok
+</a>
+
+<a href="/"><img class="test" src="https://cdn-icons-png.flaticon.com/512/6490/6490332.png"></a>
+
+</body>
+
+</html>

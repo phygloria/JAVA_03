@@ -12,11 +12,11 @@ public class LectureController {
 
     @GetMapping("movieInfo")
     public ModelAndView movieInfo(ModelAndView mv){
-        mv.addObject("member01", new MemberDTO("이상한 변호사 우영우", 2022, "대한민국 | 낭만크루"));
-        mv.addObject("member02", new MemberDTO("내일", 2022, "대한민국 | 스튜디오N"));
-        mv.addObject("member03", new MemberDTO("나는 내일 어제의 너와 만난다", 2016, "일본 | 도호주식회사"));
-        mv.addObject("member04", new MemberDTO("절대쌍교", 2020, "중국 | CCTV8"));
-        mv.addObject("member05", new MemberDTO("침향여설", 2022, "중국 | YOUKU"));
+        mv.addObject("member01", new MemberDTO("인사이드아웃2", 2024, "디즈니·픽사"));
+        mv.addObject("member02", new MemberDTO("쿵푸팬더4", 2024, "드림웍스"));
+        mv.addObject("member03", new MemberDTO("드래곤길들이기3", 2019, "드림웍스"));
+        mv.addObject("member04", new MemberDTO("엘리멘탈", 2023, "데니즈림"));
+        mv.addObject("member05", new MemberDTO("굴뚝마을의 푸펠", 2021, "STUDIO4℃"));
         mv.setViewName("lecture/movieInfo");
         return mv;
     }
@@ -27,13 +27,5 @@ public class LectureController {
         return mv;
     }
 
-//    @GetMapping("koreaDrama")
-//    public ModelAndView koreaDrama(ModelAndView mv){
-//
-//        mv.setViewName("lecture/koreaDrama");
-//        return mv;
-//    }
-
 
 }
-
