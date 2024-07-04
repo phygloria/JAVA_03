@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="jpatest">
+        <class>com.ohgiraffers.mapping.section01.entity.Member</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/gangnam"/>
+            <property name="jakarta.persistence.jdbc.user" value="gangnam"/>
+            <property name="jakarta.persistence.jdbc.password" value="gangnam"/>
+            <!--       데이터베이스 연결을 위한 구문-->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hm2ddl.auto" value="create"/>
+            <!--  위 클래스의 프로렉트를 실행시킬때마다 엔티티를 만들어라.  -->
+            <!--      value값을 update를 넣으면       -->
+        </properties>
+
+    </persistence-unit>
+</persistence>
