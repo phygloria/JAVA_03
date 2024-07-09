@@ -6,6 +6,7 @@ public class SignupDTO {
     private String userPass;
     private String role;
 
+
     public SignupDTO() {
     }
 

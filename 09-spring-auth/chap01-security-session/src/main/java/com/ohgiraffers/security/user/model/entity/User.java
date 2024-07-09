@@ -15,31 +15,22 @@ public class User {
     @Column(name = "user_no")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userNo;
-
     @Column(name = "user_id")
     private String userId;
-
     @Column(name = "user_name")
     private String userName;
-
     @Column(name = "password")
     private String password;
-
     @Column(name = "user_role")
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
 
-
-//    다중권한 처리를 위한 초석
     public List<String> getRoleList(){
         if(this.userRole.getRole().length() > 0){
             return Arrays.asList(this.userRole.getRole().split(","));
         }
-
         return new ArrayList<>();
     }
-
-
     public User() {
     }
 

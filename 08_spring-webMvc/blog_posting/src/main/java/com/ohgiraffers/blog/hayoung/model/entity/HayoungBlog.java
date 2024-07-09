@@ -1,12 +1,11 @@
 package com.ohgiraffers.blog.hayoung.model.entity;
 
-
 import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
-@Table(name = "hayoung_blog")
+@Table(name = "HayoungBlog")
 public class HayoungBlog {
 
     @Id
@@ -23,6 +22,7 @@ public class HayoungBlog {
     @Column(name = "creation_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createDate;
+
 
     public HayoungBlog() {
     }
@@ -66,14 +66,13 @@ public class HayoungBlog {
         this.createDate = createDate;
     }
 
-
     @Override
     public String toString() {
-        return "hayoungBlog{" +
+        return "HayoungBlog{" +
                 "blogNo=" + blogNo +
                 ", blogTitle='" + blogTitle + '\'' +
                 ", blogContent='" + blogContent + '\'' +
-                ", createDate='" + createDate + '\'' +
+                ", createDate=" + createDate +
                 '}';
     }
 }

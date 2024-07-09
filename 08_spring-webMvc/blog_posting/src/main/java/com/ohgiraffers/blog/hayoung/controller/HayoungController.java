@@ -20,13 +20,12 @@ public class HayoungController {
     public HayoungController(HayoungService hayoungService){
 
         this.hayoungService = hayoungService;
-
     }
 
 
     @GetMapping
     public String indexHayoung(){
-        return "hayoung/hayoungPage";
+        return "HayoungPage";
     }
 
     @PostMapping
@@ -44,7 +43,7 @@ public class HayoungController {
         if(result <= 0){
             mv.setViewName("error/error");
         }else{
-            mv.setViewName("hayoung/hayoungPage");
+            mv.setViewName("HayoungPage");
         }
 
         return mv;

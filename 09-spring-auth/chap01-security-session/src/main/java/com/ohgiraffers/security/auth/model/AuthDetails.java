@@ -6,19 +6,17 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 public class AuthDetails implements UserDetails {
 
     private User user;
 
+    public AuthDetails() {
+    }
+
     public AuthDetails(User user) {
         this.user = user;
     }
-
-
-
-
 
     public User getUser() {
         return user;
@@ -27,10 +25,6 @@ public class AuthDetails implements UserDetails {
     public void setUser(User user) {
         this.user = user;
     }
-
-
-
-
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -50,9 +44,6 @@ public class AuthDetails implements UserDetails {
     }
 
 
-
-
-
     /**
      * 계정 만료 여부를 표현하는 메서드로
      * false이면 해당 계정을 사용할 수 없다.
@@ -61,8 +52,6 @@ public class AuthDetails implements UserDetails {
     public boolean isAccountNonExpired() {
         return true;
     }
-
-
 
     /**
      * 잠겨있는 계정을 확인하는 메서드로
@@ -76,7 +65,6 @@ public class AuthDetails implements UserDetails {
         return true;
     }
 
-
     /**
      * 탈퇴 계정 여부를 표현하는 메서드
      * false면 해당 계정을 사용할 수 없다.
@@ -88,11 +76,15 @@ public class AuthDetails implements UserDetails {
         return true;
     }
 
+    /**
+     * 계정 비활성화 여부로 사용자가 사용할 수 없는 상태
+     * false이면 계정을 사용할 수 없다.
+     *
+     * 삭제 처리 같은 경우
+     * */
     @Override
     public boolean isEnabled() {
         return true;
     }
-
-
 
 }

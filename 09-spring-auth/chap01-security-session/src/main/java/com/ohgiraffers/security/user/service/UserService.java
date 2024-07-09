@@ -47,8 +47,9 @@ public class UserService {
     }
 
     public User findByUserId(String username) {
+
         User user = userRepository.findByuserId(username);
-        if (Objects.isNull(user)){
+        if(Objects.isNull(user)){
             return null;
         }
         return user;

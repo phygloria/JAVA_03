@@ -24,7 +24,6 @@ public class AuthFailHandler extends SimpleUrlAuthenticationFailureHandler {
     * */
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
-
         String errorMessage = null;
 
         if(exception instanceof BadCredentialsException){
@@ -46,9 +45,9 @@ public class AuthFailHandler extends SimpleUrlAuthenticationFailureHandler {
         errorMessage = URLEncoder.encode(errorMessage,"UTF-8");
         //오류를 처리할 페이지로 이동시킨다. URL 요청은 servlet에 정의해야함.
         setDefaultFailureUrl("/auth/fail?message="+errorMessage);
+
         // 부모에 메서드를 호출하여 다음 로직을 수행하도록 하기 위함이다.
         super.onAuthenticationFailure(request,response,exception);
-
 
     }
 }

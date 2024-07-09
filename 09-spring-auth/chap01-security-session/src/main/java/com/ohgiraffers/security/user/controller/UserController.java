@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-
     private final UserService userService;
 
     @Autowired
@@ -23,7 +22,6 @@ public class UserController {
 
     @GetMapping("/signup")
     public void signup(){
-
     }
 
     @PostMapping("/signup")
@@ -31,20 +29,18 @@ public class UserController {
         Integer result = userService.regist(signupDTO);
 
         String message = null;
-        if(result == null){
-            message = "중복회원 존재";
-        }else if (result == 0){
-            message = "서버에서 오류가 발생하였습니다";
+
+        if(result == null ){
+            message = "중복회원이 존재합니다.";
+        }else if (result ==0){
+            message = "서버에서 오류가 발생하였습니다.";
             mv.setViewName("user/signup");
         }else if (result >= 1){
-            message ="회원가입 완료";
+            message ="회원가입이 완료되었습니다.";
             mv.setViewName("auth/login");
         }
 
         mv.addObject("message", message);
         return mv;
     }
-
-
-
 }
